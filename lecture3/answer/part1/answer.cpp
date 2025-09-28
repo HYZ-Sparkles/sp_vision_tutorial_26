@@ -6,6 +6,8 @@ public:
     Material();
     ~Material();
     void print();
+private:
+    int count_=0;
 };
 
 int main()
@@ -27,10 +29,11 @@ Material::Material() {
 
 // 析构函数实现
 Material::~Material() {
-    cout << "Material Destructor!" << endl;
+    cout << "Material Destructor!It has been read "<<count_<<" times" << endl;
 }
 
 // print 函数实现
 void Material::print() {
     cout << "This is a Material object!" << endl;
+    count_+=1;
 }
